@@ -100,8 +100,8 @@ Training Recipes for Agentic Reinforcement Learning in LLMs: A Survey
 
 
 ## Training Infrastructure
-| Paper | TLDR | Component | ↳ Focus | Link | Year | Venue |
-| --- | --- | --- | --- | --- | --- | --- |
+| Paper | TLDR | Component | ↳ Focus | Year | Venue |
+| --- | --- | --- | --- | --- | --- |
 | [Proximal Policy Optimization Algorithms](https://arxiv.org/abs/1707.06347) | Standard synchronous execution model for on-policy consistency. | Training Infrastructure | Actor-Learner Architectures | 2017 | ICLR |
 | [DeepSeekMath: Pushing the Limits of Mathematical Reasoning in Open Language Models](https://arxiv.org/abs/2402.03300) | Utilizes synchronous execution to simplify credit assignment. | Training Infrastructure | Actor-Learner Architectures | 2024 | arXiv |
 | [AReaL: A Large-Scale Asynchronous Reinforcement Learning System for Language Reasoning](https://arxiv.org/abs/2505.24298) | Decouples collection and training with staleness control. | Training Infrastructure | Actor-Learner Architectures | 2025 | NeurIPS |
@@ -126,8 +126,8 @@ Training Recipes for Agentic Reinforcement Learning in LLMs: A Survey
 | [DeepSeek-V3.2: Pushing the Frontier of Open Large Language Models](https://arxiv.org/abs/2512.02556) | Adopts off-policy sequence masking for training stability. | Training Infrastructure | Training-Inference Mismatch | 2025 | arXiv |
 
 ## Training Environments
-| Paper | TLDR | Component | ↳ Focus | Link | Year | Venue |
-| --- | --- | --- | --- | --- | --- | --- |
+| Paper | TLDR | Component | ↳ Focus | Year | Venue |
+| --- | --- | --- | --- | --- | --- |
 | [Agentic Reasoning and Tool Integration for LLMs via Reinforcement Learning](https://arxiv.org/abs/2505.01441) | Uses outcome-based rewards to train tool invocation without step-level supervision. | Training Environments | Single-Domain Environments | 2025 | arXiv |
 | [VerlTool: Towards Holistic Agentic Reinforcement Learning with Tool Use](https://arxiv.org/abs/2509.01055) | Modular framework for unified performance across SQL, code, and visual tasks. | Training Environments | Single-Domain Environments | 2025 | arXiv |
 | [Tool-Augmented Policy Optimization: Synergizing Reasoning and Adaptive Tool Use with Reinforcement Learning](https://arxiv.org/abs/2510.07038) | Uses Dynamic-PPO to optimize tool usage for external retrieval. | Training Environments | Single-Domain Environments | 2025 | arXiv |
@@ -156,8 +156,8 @@ Training Recipes for Agentic Reinforcement Learning in LLMs: A Survey
 | [Thinking vs. Doing: Agents that Reason by Scaling Test-Time Interaction](https://arxiv.org/abs/2506.07976) | Agents learn to adaptively allocate patience for test-time budgets. | Training Environments | Multi-Domain Environments | 2025 | arXiv |
 
 ## Benchmarks for Training Environments
-| Paper | TLDR | Component | ↳ Focus | Link | Year | Venue |
-| --- | --- | --- | --- | --- | --- | --- |
+| Paper | TLDR | Component | ↳ Focus | Year | Venue |
+| --- | --- | --- | --- | --- | --- |
 | [AgentGym: Evaluating and Training Large Language Model-based Agents across Diverse Environments](https://aclanthology.org/2025.acl-long.1355/) | Unifies diverse tasks (web, games, databases) under a standard interface. | Benchmarks for Training Environments | Training Gyms | 2025 | ACL |
 | [The BrowserGym Ecosystem for Web Agent Research](https://arxiv.org/abs/2412.05467) | Unifies diverse web tasks under a standard interface for generalization. | Benchmarks for Training Environments | Training Gyms | 2025 | TMLR |
 | [WebRL: Training LLM Web Agents via Self-Evolving Online Curriculum Reinforcement Learning](https://openreview.net/forum?id=oVKEAFjEqv) | Provides functional browser environments with self-evolving curricula. | Benchmarks for Training Environments | Training Gyms | 2025 | ICLR |

@@ -102,77 +102,77 @@ Training Recipes for Agentic Reinforcement Learning in LLMs: A Survey
 ## Training Infrastructure
 | Paper | TLDR | Component | ↳ Focus | Link | Year | Venue |
 | --- | --- | --- | --- | --- | --- | --- |
-| **PPO** | Standard synchronous execution model for on-policy consistency. | Training Infrastructure | Actor-Learner Architectures | | |
-| **DeepSeekMath** | Utilizes synchronous execution to simplify credit assignment. | Training Infrastructure | Actor-Learner Architectures | | |
-| **AReaL** | Decouples collection and training with staleness control. | Training Infrastructure | Actor-Learner Architectures | | |
-| **A3C** | Introduces asynchronous actor-learner decoupling. | Training Infrastructure | Actor-Learner Architectures | | |
-| **IMPALA** | V-trace correction for off-policy lag in asynchronous setups. | Training Infrastructure | Actor-Learner Architectures | | |
-| **IMPACT** | Uses clipped target networks to stabilize stale critics. | Training Infrastructure | Actor-Learner Architectures | | |
-| **LlamaRL** | Orchestrates disjoint GPU groups with AIPO for lag correction. | Training Infrastructure | Actor-Learner Architectures | | |
-| **FP16-Precision-RL** | Switches to FP16 to reduce training-inference numerical divergence. | Training Infrastructure | Precision & Acceleration | | |
-| **FP8-LM** | Demonstrates doubled throughput with FP8 training. | Training Infrastructure | Precision & Acceleration | | |
-| **COAT** | Compresses optimizer states and activations for efficiency. | Training Infrastructure | Precision & Acceleration | | |
-| **Smooth-SwiGLU-FP8-Training** | Smoothing operation to handle activation outliers in FP8. | Training Infrastructure | Precision & Acceleration | | |
-| **FP4-Training-Framework** | Enables FP4 training via block-wise quantization. | Training Infrastructure | Precision & Acceleration | | |
-| **HALO** | Hadamard rotations to spread outliers for low-bit precision. | Training Infrastructure | Precision & Acceleration | | |
-| **QeRL** | Uses Adaptive Quantization Noise (AQN) for exploration. | Training Infrastructure | Precision & Acceleration | | |
-| **PagedAttention** | Optimized inference kernel that contributes to mismatch. | Training Infrastructure | Training-Inference Mismatch | | |
-| **SGLang** | High-throughput inference engine often differing from learner. | Training Infrastructure | Training-Inference Mismatch | | |
-| **FSDP** | High-precision training framework (standard baseline). | Training Infrastructure | Training-Inference Mismatch | | |
-| **Megatron-LM** | High-precision training framework (standard baseline). | Training Infrastructure | Training-Inference Mismatch | | |
-| **MiniMax-M1** | Upcasts output head to FP32 to fix entropy collapse. | Training Infrastructure | Training-Inference Mismatch | | |
-| **TIS** | Token-level importance sampling to correct distribution shift. | Training Infrastructure | Training-Inference Mismatch | | |
-| **Sequence-Level-Correction** | Sequence masking to robustly handle off-policy shift. | Training Infrastructure | Training-Inference Mismatch | | |
-| **DeepSeek-V3.2** | Adopts off-policy sequence masking for training stability. | Training Infrastructure | Training-Inference Mismatch | | |
+| [Proximal Policy Optimization Algorithms](https://arxiv.org/abs/1707.06347) | Standard synchronous execution model for on-policy consistency. | Training Infrastructure | Actor-Learner Architectures | 2017 | ICLR |
+| [DeepSeekMath: Pushing the Limits of Mathematical Reasoning in Open Language Models](https://arxiv.org/abs/2402.03300) | Utilizes synchronous execution to simplify credit assignment. | Training Infrastructure | Actor-Learner Architectures | 2024 | arXiv |
+| [AReaL: A Large-Scale Asynchronous Reinforcement Learning System for Language Reasoning](https://arxiv.org/abs/2505.24298) | Decouples collection and training with staleness control. | Training Infrastructure | Actor-Learner Architectures | 2025 | NeurIPS |
+| [Asynchronous Methods for Deep Reinforcement Learning](https://arxiv.org/abs/1602.01783) | Introduces asynchronous actor-learner decoupling. | Training Infrastructure | Actor-Learner Architectures | 2016 | ICML |
+| [IMPALA: Scalable Distributed Deep-RL with Importance Weighted Actor-Learner Architectures](https://arxiv.org/abs/1802.01561) | V-trace correction for off-policy lag in asynchronous setups. | Training Infrastructure | Actor-Learner Architectures | 2018 | ICML |
+| [IMPACT: Importance Weighted Asynchronous Architectures with Clipped Target Networks](https://arxiv.org/abs/1912.00167) | Uses clipped target networks to stabilize stale critics. | Training Infrastructure | Actor-Learner Architectures | 2020 | ICLR |
+| [LlamaRL: A Distributed Asynchronous Reinforcement Learning Framework for Efficient Large-scale LLM Training](https://arxiv.org/abs/2505.24034) | Orchestrates disjoint GPU groups with AIPO for lag correction. | Training Infrastructure | Actor-Learner Architectures | 2025 | arXiv |
+| [Defeating the Training-Inference Mismatch via FP16](https://arxiv.org/abs/2510.26788) | Switches to FP16 to reduce training-inference numerical divergence. | Training Infrastructure | Precision & Acceleration | 2025 | arXiv |
+| [FP8-LM: Training FP8 Large Language Models](https://arxiv.org/abs/2310.18313) | Demonstrates doubled throughput with FP8 training. | Training Infrastructure | Precision & Acceleration | 2023 | arXiv |
+| [COAT: Compressing Optimizer states and Activations for Memory-Efficient FP8 Training](https://openreview.net/forum?id=XfKSDgqIRj) | Compresses optimizer states and activations for efficiency. | Training Infrastructure | Precision & Acceleration | 2025 | ICLR |
+| [Scaling FP8 training to trillion-token LLMs](https://arxiv.org/abs/2409.12517) | Smoothing operation to handle activation outliers in FP8. | Training Infrastructure | Precision & Acceleration | 2025 | ICLR |
+| [Optimizing Large Language Model Training Using FP4 Quantization](https://openreview.net/forum?id=uK7JArZEJM) | Enables FP4 training via block-wise quantization. | Training Infrastructure | Precision & Acceleration | 2025 | ICML |
+| [HALO: Hadamard-Assisted Lower-Precision Optimization for LLMs](https://openreview.net/forum?id=OcMpSh79aE) | Hadamard rotations to spread outliers for low-bit precision. | Training Infrastructure | Precision & Acceleration | 2025 | NeurIPS |
+| [QeRL: Beyond Efficiency -- Quantization-enhanced Reinforcement Learning for LLMs](https://arxiv.org/abs/2510.11696) | Uses Adaptive Quantization Noise (AQN) for exploration. | Training Infrastructure | Precision & Acceleration | 2025 | arXiv |
+| [Efficient Memory Management for Large Language Model Serving with PagedAttention](https://arxiv.org/abs/2309.06180) | Optimized inference kernel that contributes to mismatch. | Training Infrastructure | Training-Inference Mismatch | 2023 | SOSP |
+| [SGLang: Efficient Execution of Structured Language Model Programs](https://arxiv.org/abs/2312.07104) | High-throughput inference engine often differing from learner. | Training Infrastructure | Training-Inference Mismatch | 2024 | NeurIPS |
+| [PyTorch FSDP: Experiences on Scaling Fully Sharded Data Parallel](https://arxiv.org/abs/2304.11277) | High-precision training framework (standard baseline). | Training Infrastructure | Training-Inference Mismatch | 2023 | arXiv |
+| [Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism](https://arxiv.org/abs/1909.08053) | High-precision training framework (standard baseline). | Training Infrastructure | Training-Inference Mismatch | 2019 | arXiv |
+| [MiniMax-M1: Scaling Test-Time Compute Efficiently with Lightning Attention](https://arxiv.org/abs/2506.13585) | Upcasts output head to FP32 to fix entropy collapse. | Training Infrastructure | Training-Inference Mismatch | 2025 | arXiv |
+| [Your Efficient RL Framework Secretly Brings You Off-Policy RL Training](https://fengyao.notion.site/off-policy-rl) | Token-level importance sampling to correct distribution shift. | Training Infrastructure | Training-Inference Mismatch | 2025 | Blog |
+| [When Speed Kills Stability: Demystifying RL Collapse from the Training-Inference Mismatch](https://richardli.xyz/rl-collapse) | Sequence masking to robustly handle off-policy shift. | Training Infrastructure | Training-Inference Mismatch | 2025 | Blog |
+| [DeepSeek-V3.2: Pushing the Frontier of Open Large Language Models](https://arxiv.org/abs/2512.02556) | Adopts off-policy sequence masking for training stability. | Training Infrastructure | Training-Inference Mismatch | 2025 | arXiv |
 
 ## Training Environments
 | Paper | TLDR | Component | ↳ Focus | Link | Year | Venue |
 | --- | --- | --- | --- | --- | --- | --- |
-| **ARTIST** | Uses outcome-based rewards to train tool invocation without step-level supervision. | Training Environments | Single-Domain Environments | | |
-| **VerlTool** | Modular framework for unified performance across SQL, code, and visual tasks. | Training Environments | Single-Domain Environments | | |
-| **TAPO** | Uses Dynamic-PPO to optimize tool usage for external retrieval. | Training Environments | Single-Domain Environments | | |
-| **Agent-R1** | Formalizes tool use as an MDP to improve multi-step reasoning. | Training Environments | Single-Domain Environments | | |
-| **Simia-RL** | Leverages simulated feedback to overcome data scarcity. | Training Environments | Single-Domain Environments | | |
-| **MCP** | Standard for reproducible agent-tool interactions. | Training Environments | Single-Domain Environments | | |
-| **Navigating WebAI** | Trains hierarchical T5 planner with V-MPO for web navigation. | Training Environments | Single-Domain Environments | | |
-| **AutoWebGLM** | Staged pipeline (SFT $\to$ DPO $\to$ RFT) for stability in web agents. | Training Environments | Single-Domain Environments | | |
-| **WebAgent-R1** | Applies on-policy M-GRPO using sparse binary signals in WebArena-Lite. | Training Environments | Single-Domain Environments | | |
-| **WebRL** | Uses self-evolving curriculum and outcome reward models for web agents. | Training Environments | Single-Domain Environments | | |
-| **ReTool** | Shows reward-driven learning yields emergent tool behaviors. | Training Environments | Single-Domain Environments | | |
-| **ToRL** | Demonstrates emergent tool use from reward-driven learning. | Training Environments | Single-Domain Environments | | |
-| **One-shot RLVR** | Shows single verifier-rewarded problem can double performance. | Training Environments | Single-Domain Environments | | |
-| **StepCoder** | Decomposes code tasks into curriculum-aligned sub-problems with compiler feedback. | Training Environments | Single-Domain Environments | | |
-| **BrowserGym** | Aggregates web benchmarks into a fixed schema. | Training Environments | Multi-Domain Environments | | |
-| **AgentGym** | Unifies diverse domains via a consistent HTTP interface. | Training Environments | Multi-Domain Environments | | |
-| **Mind2Web** | Uses strict splits to penalize layout memorization. | Training Environments | Multi-Domain Environments | | |
-| **WebCanvas** | Evaluates agents against live, drifting UIs. | Training Environments | Multi-Domain Environments | | |
-| **VisualWebArena** | Unifies multimodal tasks through consistent GUI interfaces. | Training Environments | Multi-Domain Environments | | |
-| **WebVoyager** | Unifies multimodal tasks through consistent GUI interfaces. | Training Environments | Multi-Domain Environments | | |
-| **AgentGen** | Applies bidirectional evolution to synthesize environment code. | Training Environments | Multi-Domain Environments | | |
-| **Eurekaverse** | LLMs write simulation code for embodied control tasks. | Training Environments | Multi-Domain Environments | | |
-| **InSTA** | Generates verifiable tasks on unlabeled websites at internet scale. | Training Environments | Multi-Domain Environments | | |
-| **Self-Challenging-Agents** | Generates verifiable Code-as-Task instances to bootstrap training data. | Training Environments | Multi-Domain Environments | | |
-| **AgentGym-RL** | Dynamically expands horizon from greedy to exploratory settings. | Training Environments | Multi-Domain Environments | | |
-| **TTI** | Agents learn to adaptively allocate patience for test-time budgets. | Training Environments | Multi-Domain Environments | | |
+| [Agentic Reasoning and Tool Integration for LLMs via Reinforcement Learning](https://arxiv.org/abs/2505.01441) | Uses outcome-based rewards to train tool invocation without step-level supervision. | Training Environments | Single-Domain Environments | 2025 | arXiv |
+| [VerlTool: Towards Holistic Agentic Reinforcement Learning with Tool Use](https://arxiv.org/abs/2509.01055) | Modular framework for unified performance across SQL, code, and visual tasks. | Training Environments | Single-Domain Environments | 2025 | arXiv |
+| [Tool-Augmented Policy Optimization: Synergizing Reasoning and Adaptive Tool Use with Reinforcement Learning](https://arxiv.org/abs/2510.07038) | Uses Dynamic-PPO to optimize tool usage for external retrieval. | Training Environments | Single-Domain Environments | 2025 | arXiv |
+| [Agent-R1: Training Powerful LLM Agents with End-to-End Reinforcement Learning](https://arxiv.org/abs/2511.14460) | Formalizes tool use as an MDP to improve multi-step reasoning. | Training Environments | Single-Domain Environments | 2025 | arXiv |
+| [Simulating Environments with Reasoning Models for Agent Training](https://arxiv.org/abs/2511.01824) | Leverages simulated feedback to overcome data scarcity. | Training Environments | Single-Domain Environments | 2025 | arXiv |
+| [Introducing the Model Context Protocol](https://www.anthropic.com/news/model-context-protocol) | Standard for reproducible agent-tool interactions. | Training Environments | Single-Domain Environments | 2024 | Blog |
+| [Navigating WebAI: Training Agents to Complete Web Tasks with Large Language Models and Reinforcement Learning](https://dl.acm.org/doi/10.1145/3605098.3635903) | Trains hierarchical T5 planner with V-MPO for web navigation. | Training Environments | Single-Domain Environments | 2024 | SAC |
+| [AutoWebGLM: A Large Language Model-based Web Navigating Agent](https://dl.acm.org/doi/10.1145/3637528.3671620) | Staged pipeline (SFT $\to$ DPO $\to$ RFT) for stability in web agents. | Training Environments | Single-Domain Environments | 2024 | KDD |
+| [WebAgent-R1: Training Web Agents via End-to-End Multi-Turn Reinforcement Learning](https://aclanthology.org/2025.emnlp-main.401/) | Applies on-policy M-GRPO using sparse binary signals in WebArena-Lite. | Training Environments | Single-Domain Environments | 2025 | EMNLP |
+| [WebRL: Training LLM Web Agents via Self-Evolving Online Curriculum Reinforcement Learning](https://openreview.net/forum?id=oVKEAFjEqv) | Uses self-evolving curriculum and outcome reward models for web agents. | Training Environments | Single-Domain Environments | 2025 | ICLR |
+| [ReTool: Reinforcement Learning for Strategic Tool Use in LLMs](https://arxiv.org/abs/2504.11536) | Shows reward-driven learning yields emergent tool behaviors. | Training Environments | Single-Domain Environments | 2025 | arXiv |
+| [ToRL: Scaling Tool-Integrated RL](https://arxiv.org/abs/2503.23383) | Demonstrates emergent tool use from reward-driven learning. | Training Environments | Single-Domain Environments | 2025 | arXiv |
+| [Reinforcement Learning for Reasoning in Large Language Models with One Training Example](https://arxiv.org/abs/2504.20571) | Shows single verifier-rewarded problem can double performance. | Training Environments | Single-Domain Environments | 2025 | arXiv |
+| [StepCoder: Improve Code Generation with Reinforcement Learning from Compiler Feedback](https://aclanthology.org/2024.acl-long.251/) | Decomposes code tasks into curriculum-aligned sub-problems with compiler feedback. | Training Environments | Single-Domain Environments | 2024 | ACL |
+| [The BrowserGym Ecosystem for Web Agent Research](https://arxiv.org/abs/2412.05467) | Aggregates web benchmarks into a fixed schema. | Training Environments | Multi-Domain Environments | 2025 | TMLR |
+| [AgentGym: Evolving Large Language Model-based Agents across Diverse Environments](https://aclanthology.org/2025.acl-long.1355/) | Unifies diverse domains via a consistent HTTP interface. | Training Environments | Multi-Domain Environments | 2025 | ACL |
+| [Mind2Web: Towards a Generalist Agent for the Web](https://arxiv.org/abs/2306.06070) | Uses strict splits to penalize layout memorization. | Training Environments | Multi-Domain Environments | 2023 | NeurIPS |
+| [WebCanvas: Benchmarking Web Agents in Online Environments](https://arxiv.org/abs/2406.12373) | Evaluates agents against live, drifting UIs. | Training Environments | Multi-Domain Environments | 2024 | arXiv |
+| [VisualWebArena: Evaluating Multimodal Agents on Realistic Visual Web Tasks](https://aclanthology.org/2024.acl-long.48/) | Unifies multimodal tasks through consistent GUI interfaces. | Training Environments | Multi-Domain Environments | 2024 | ACL |
+| [WebVoyager: Building an End-to-End Web Agent with Large Multimodal Models](https://aclanthology.org/2024.acl-long.598/) | Unifies multimodal tasks through consistent GUI interfaces. | Training Environments | Multi-Domain Environments | 2024 | ACL |
+| [AgentGen: Enhancing Planning Abilities for Large Language Model based Agent via Environment and Task Generation](https://arxiv.org/abs/2408.00764) | Applies bidirectional evolution to synthesize environment code. | Training Environments | Multi-Domain Environments | 2025 | KDD |
+| [Eurekaverse: Environment Curriculum Generation via Large Language Models](https://arxiv.org/abs/2411.01775) | LLMs write simulation code for embodied control tasks. | Training Environments | Multi-Domain Environments | 2024 | CoRL |
+| [InSTA: Towards Internet-Scale Training For Agents](https://arxiv.org/abs/2502.06776) | Generates verifiable tasks on unlabeled websites at internet scale. | Training Environments | Multi-Domain Environments | 2025 | arXiv |
+| [Self-Challenging Language Model Agents](https://arxiv.org/abs/2506.01716) | Generates verifiable Code-as-Task instances to bootstrap training data. | Training Environments | Multi-Domain Environments | 2025 | arXiv |
+| [AgentGym-RL: Training LLM Agents for Long-Horizon Decision Making through Multi-Turn Reinforcement Learning](https://arxiv.org/abs/2509.08755) | Dynamically expands horizon from greedy to exploratory settings. | Training Environments | Multi-Domain Environments | 2025 | arXiv |
+| [Thinking vs. Doing: Agents that Reason by Scaling Test-Time Interaction](https://arxiv.org/abs/2506.07976) | Agents learn to adaptively allocate patience for test-time budgets. | Training Environments | Multi-Domain Environments | 2025 | arXiv |
 
 ## Benchmarks for Training Environments
 | Paper | TLDR | Component | ↳ Focus | Link | Year | Venue |
 | --- | --- | --- | --- | --- | --- | --- |
-| **AgentGym** | Unifies diverse tasks (web, games, databases) under a standard interface. | Benchmarks for Training Environments | Training Gyms | | |
-| **BrowserGym** | Unifies diverse web tasks under a standard interface for generalization. | Benchmarks for Training Environments | Training Gyms | | |
-| **WebRL** | Provides functional browser environments with self-evolving curricula. | Benchmarks for Training Environments | Training Gyms | | |
-| **WebArena** | Functional browser environment for learning navigation policies. | Benchmarks for Training Environments | Training Gyms | | |
-| **OSWorld** | High-fidelity environment for computer control (OS). | Benchmarks for Training Environments | Training Gyms | | |
-| **AndroidWorld** | High-fidelity environment for mobile control. | Benchmarks for Training Environments | Training Gyms | | |
-| **ALFWorld** | Bridges high-level reasoning with low-level embodied physics. | Benchmarks for Training Environments | Training Gyms | | |
-| **MMLU** | Standardized exam metrics for general cognitive reasoning. | Benchmarks for Training Environments | Certification Benchmarks | | |
-| **GSM8K** | Standardized benchmark for grade-school math reasoning. | Benchmarks for Training Environments | Certification Benchmarks | | |
-| **AgentBench** | Quantifies the gap between commercial and open-source models across 8 modalities. | Benchmarks for Training Environments | Certification Benchmarks | | |
-| **PaperBench** | Certification test for research reproduction capabilities. | Benchmarks for Training Environments | Certification Benchmarks | | |
-| **SWE-bench** | Certification test for software engineering and error recovery. | Benchmarks for Training Environments | Certification Benchmarks | | |
-| **CVE-Bench** | Adversarial scenarios to certify robustness against exploits. | Benchmarks for Training Environments | Certification Benchmarks | | |
-| **Machiavelli** | Interactive scenarios to certify robustness against ethical hazards. | Benchmarks for Training Environments | Certification Benchmarks | | |
-| **R-Judge** | Static trajectories to certify ability to refuse unsafe instructions. | Benchmarks for Training Environments | Certification Benchmarks | | |
+| [AgentGym: Evaluating and Training Large Language Model-based Agents across Diverse Environments](https://aclanthology.org/2025.acl-long.1355/) | Unifies diverse tasks (web, games, databases) under a standard interface. | Benchmarks for Training Environments | Training Gyms | 2025 | ACL |
+| [The BrowserGym Ecosystem for Web Agent Research](https://arxiv.org/abs/2412.05467) | Unifies diverse web tasks under a standard interface for generalization. | Benchmarks for Training Environments | Training Gyms | 2025 | TMLR |
+| [WebRL: Training LLM Web Agents via Self-Evolving Online Curriculum Reinforcement Learning](https://openreview.net/forum?id=oVKEAFjEqv) | Provides functional browser environments with self-evolving curricula. | Benchmarks for Training Environments | Training Gyms | 2025 | ICLR |
+| [WebArena: A Realistic Web Environment for Building Autonomous Agents](https://iclr.cc/virtual/2024/poster/17826) | Functional browser environment for learning navigation policies. | Benchmarks for Training Environments | Training Gyms | 2024 | ICLR |
+| [OSWorld: Benchmarking Multimodal Agents for Open-Ended Tasks in Real Computer Environments](https://proceedings.neurips.cc/paper_files/paper/2024/file/5d413e48f84dc61244b6be550f1cd8f5-Paper-Datasets_and_Benchmarks_Track.pdf) | High-fidelity environment for computer control (OS). | Benchmarks for Training Environments | Training Gyms | 2024 | NeurIPS |
+| [AndroidWorld: A Dynamic Benchmarking Environment for Autonomous Agents](https://openreview.net/forum?id=il5yUQsrjC) | High-fidelity environment for mobile control. | Benchmarks for Training Environments | Training Gyms | 2025 | ICLR |
+| [ALFWorld: Aligning Text and Embodied Environments for Interactive Learning](https://openreview.net/forum?id=0IOX0YcCdTn) | Bridges high-level reasoning with low-level embodied physics. | Benchmarks for Training Environments | Training Gyms | 2021 | ICLR |
+| [Measuring Massive Multitask Language Understanding](https://openreview.net/forum?id=d7KBjmI3Dk) | Standardized exam metrics for general cognitive reasoning. | Benchmarks for Training Environments | Certification Benchmarks | 2021 | ICLR |
+| [Training Verifiers to Solve Math Word Problems](https://arxiv.org/abs/2110.14168) | Standardized benchmark for grade-school math reasoning. | Benchmarks for Training Environments | Certification Benchmarks | 2021 | arXiv |
+| [AgentBench: Evaluating LLMs as Agents](https://openreview.net/forum?id=zAdUB0aCTQ) | Quantifies the gap between commercial and open-source models across 8 modalities. | Benchmarks for Training Environments | Certification Benchmarks | 2024 | ICLR |
+| [PaperBench: Evaluating AI's Ability to Replicate AI Research](https://icml.cc/virtual/2025/poster/43586) | Certification test for research reproduction capabilities. | Benchmarks for Training Environments | Certification Benchmarks | 2025 | ICML |
+| [SWE-bench: Can Language Models Resolve Real-World GitHub Issues?](https://openreview.net/forum?id=VTF8yNQM66) | Certification test for software engineering and error recovery. | Benchmarks for Training Environments | Certification Benchmarks | 2024 | ICLR |
+| [CVE-Bench: A Benchmark for AI Agents' Ability to Exploit Real-World Web Application Vulnerabilities](https://icml.cc/virtual/2025/poster/46522) | Adversarial scenarios to certify robustness against exploits. | Benchmarks for Training Environments | Certification Benchmarks | 2025 | ICML |
+| [Do the Rewards Justify the Means? Measuring Trade-offs Between Rewards and Ethical Behavior in the MACHIAVELLI Benchmark](https://arxiv.org/abs/2304.03279) | Interactive scenarios to certify robustness against ethical hazards. | Benchmarks for Training Environments | Certification Benchmarks | 2023 | ICML |
+| [R-Judge: Benchmarking Safety Risk Awareness for LLM Agents](https://aclanthology.org/2024.findings-emnlp.79/) | Static trajectories to certify ability to refuse unsafe instructions. | Benchmarks for Training Environments | Certification Benchmarks | 2024 | EMNLP (Findings) |
 
 ## How to Contribute
 

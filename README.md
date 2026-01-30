@@ -1,7 +1,7 @@
 # Agentic-RL-Training-Recipes
 Training Recipes for Agentic Reinforcement Learning in LLMs: A Survey
 
-[![arXiv](https://img.shields.io/badge/arXiv-pending-lightgrey.svg)](#)
+[![Paper](https://img.shields.io/badge/TechRxiv-Paper-blue)](https://www.techrxiv.org/users/1020340/articles/1380448-training-recipes-for-agentic-reinforcement-learning-in-llms-a-survey)
 [![GitHub Stars](https://img.shields.io/github/stars/blacksnail789521/Agentic-RL-Training-Recipes?style=social)](https://github.com/blacksnail789521/Agentic-RL-Training-Recipes/stargazers)
 ![Topic](https://img.shields.io/badge/Agentic%20RL-%20Training%20Recipes-blueviolet)
 [![How to Cite](https://img.shields.io/badge/Cite-bibtex-orange)](#citation)
@@ -180,11 +180,13 @@ We welcome contributions! Feel free to open a PR with improvements, fixes, or ad
 
 ## Citation
 
-Citation details will be added once the paper is public. Placeholder for now.
 ```bibtex
-@misc{agentic_rl_training_recipes_placeholder,
+@article{chang2026training,
   title={Training Recipes for Agentic Reinforcement Learning in LLMs: A Survey},
-  author={TBD},
-  year={TBD},
-  note={Citation coming soon}
+  author={Chang, Ching and Xiao, Yijia and Xu, Jade and Xu, Fred and Ye, Chenchen and Li, Ruoyan and Zhang, Junkai and Deng, Yihe and Zheng, Kyle and Ji, Ethan and others},
+  journal={TechRxiv},
+  year={2026},
+  publisher={TechRxiv},
+  doi={10.36227/techrxiv.176972131.13438500/v1},
+  url={https://www.techrxiv.org/users/1020340/articles/1380448-training-recipes-for-agentic-reinforcement-learning-in-llms-a-survey}
 }
